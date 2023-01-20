@@ -1,0 +1,7 @@
+{
+  "name": "worldwidesingles",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
