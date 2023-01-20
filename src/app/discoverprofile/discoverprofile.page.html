@@ -26,7 +26,7 @@
 
 			<ion-slides [options]="slideOpt"  autoplay="true" loop="true" slide-interval="30000" pager>
 			  <ion-slide *ngFor="let user of photos">
-				<img class="custom-class" src="data:image/png;base64,{{user.image}}"/>
+				<ion-img style="min-height:350px;" class="custom-class" [src]="data:image/png;base64,{{user.image}}" ></ion-img>
 			  </ion-slide>
 			</ion-slides>
 	  
