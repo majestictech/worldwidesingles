@@ -35,6 +35,7 @@
     "@ionic-native/paypal": "^5.36.0",
     "@ionic-native/social-sharing": "^5.36.0",
     "@ionic/angular": "^5.5.2",
+    "cordova-browser": "6.0.0",
     "firebase": "^9.6.1",
     "gradle": "^1.2.4",
     "hammerjs": "^2.0.8",

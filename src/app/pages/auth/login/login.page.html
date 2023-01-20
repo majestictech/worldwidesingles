@@ -33,11 +33,11 @@
 	<form #form="ngForm" (ngSubmit)="login(form)" method="post">
 	<!--<form #form="ngForm" method="post">-->
 		<ion-item lines="none">
-			<ion-input autofocus="true" type="text" [(ngModel)]="username" name="username" placeholder="UserName"  slot=""></ion-input>
+			<ion-input autofocus="true" type="text" [(ngModel)]="username" name="username" placeholder="UserName"  slot=""  (keyup.enter)="login(form)"></ion-input>
 		</ion-item>
 		<br>
 		<ion-item lines="none">
-			<ion-input #showHidePassword ngModel type="password" name="password" placeholder="Password" slot=""></ion-input>
+			<ion-input #showHidePassword ngModel type="password" name="password" placeholder="Password" slot="" (keyup.enter)="login(form)"></ion-input>
 		</ion-item>
 		<br>
 		<ion-button type="submit" fill="outline" expand="block" class="login_btn">
