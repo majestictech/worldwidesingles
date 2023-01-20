@@ -3,7 +3,7 @@
     <name>World Wide Singles</name>
     <description>Dating Application</description>
     <author email="abhishek@majestictech.co.in" href="https://www.majestictech.co.in/">Majestic Technosoft Pvt. Ltd.</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://localhost:8103" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -144,4 +144,5 @@
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <allow-navigation href="http://localhost:8103" sessionid="761b9418" />
 </widget>
