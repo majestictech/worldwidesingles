@@ -1,0 +1,15 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+	<span slot="start">
+		<ion-icon name="reload-outline" class="reload_icn" (click)="this.loadTinderCards()"></ion-icon>
+	</span>
+	<ion-title class="ion-text-center">Discover</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+	<tinder-ui [cards]="cards" (choiceMade)="logChoice($event)"></tinder-ui>
+	<center><br><br><br><br><br><br><br><div (click)="this.loadTinderCards()"><ion-icon name="reload-outline" class="reload_icn"></ion-icon> Load More Profiles</div></center>
+</ion-content>
+

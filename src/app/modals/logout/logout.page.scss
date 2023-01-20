@@ -1,0 +1,28 @@
+.logout p{
+	font-size:26px;
+	font-weight:bold;
+	margin: 16px 0;
+}
+
+.logout span{
+	color:var(--ion-color-medium-shade, #808289);
+}
+
+.cancel, .logout_btn{
+	border-width:2px 2px 0 0;
+	border-color:var(--ion-color-light-shade, #d7d8da);
+	border-style: solid;
+	cursor:pointer;
+}
+
+.cancel p{
+	color:var(--ion-color-medium-shade, #808289);
+}
+
+.logout_btn{
+	border-width:2px 0 0 0 !important;
+}
+
+.logout_btn p{
+	color:var(--ion-color-primary, #FD671D);
+}

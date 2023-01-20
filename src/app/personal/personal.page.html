@@ -1,0 +1,142 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="home" text="" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+	
+	<ion-title class="ion-text-center ">Personal</ion-title>
+
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+
+	<ion-grid class="ion-padding-horizontal webadjust">
+		<form #form="ngForm" (ngSubmit)="majStoreProfile(form)" method="post">
+			<ion-row>
+				<ion-col size="12">
+					<div class="lightback ion-text-center">	
+						<p class="nametitle">My Name is</p>
+						<ion-item mode="md" class="ion-text-center">	
+							<ion-input name="display_name" [(ngModel)]="display_name" placeholder="Enter your name here" (ionInput)="checkRequired($event,'display_name')" ></ion-input>
+						</ion-item>
+						<p class="appearin">This is how it will appear in</p>
+					</div>
+				</ion-col>	
+		
+				<ion-col size="12">
+					<div class="lightback ion-text-center">	
+						<p class="nametitle">My Age is</p>
+							<ion-item mode="md" class="ion-text-center">
+								<ion-input class="age" name="age" [(ngModel)]="age" placeholder="Enter your age here" (ionInput)="checkRequired($event,'age')"></ion-input>
+							</ion-item>
+						<p class="appearin">Your age will be public</p>
+					</div>
+				</ion-col>
+				
+				<ion-col size="12">
+					<div class="lightback ion-text-center">	
+						<p class="nametitle">About</p>
+						<ion-item mode="md" class="ion-text-center">
+							<ion-input type="text" [(ngModel)]="bio" name="bio"></ion-input>
+						</ion-item>
+					</div>
+				</ion-col>
+				
+				<ion-col size="12">
+					<div class="lightback ion-text-center">	
+						<p class="nametitle">Profession</p>
+						<ion-item mode="md" class="ion-text-center">
+							<ion-input type="text" [(ngModel)]="profession" name="profession"></ion-input>
+						</ion-item>
+					</div>
+				</ion-col>
+				
+				<ion-col size="12">
+					<div class="lightback ion-text-center">
+						<p class="settings_title">Gender</p>
+						<ion-radio-group name="gender" [(ngModel)]="gender">
+							<ion-item lines="none" mode="md">
+							  <ion-label>Female</ion-label>
+							  <ion-radio slot="end"  value="female" name="female"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Male</ion-label>
+							  <ion-radio slot="end" value="male" name="male"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Non-Binary</ion-label>
+							  <ion-radio slot="end" value="nonbinary" name="nonBinary"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Transgender Female</ion-label>
+							  <ion-radio slot="end" value="transfemale" name="transFemale"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Transgender Male</ion-label>
+							  <ion-radio slot="end" value="transmale" name="transMale"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Transgender</ion-label>
+							  <ion-radio slot="end" value="transgender" name="transgender"></ion-radio>
+							</ion-item>
+						</ion-radio-group>
+					</div>
+				</ion-col>
+
+				<ion-col size="12">
+					<div class="lightback ion-text-center">
+						<p class="settings_title">Intrested In</p>
+						<ion-radio-group name="showMe" [(ngModel)]="showMe">
+							<ion-item lines="none" mode="md">
+							  <ion-label>Female</ion-label>
+							  <ion-radio slot="end" value="female" name="female"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Male</ion-label>
+							  <ion-radio slot="end" value="male" name="male"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Non-Binary</ion-label>
+							  <ion-radio slot="end" value="nonbinary" name="nonBinary"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Transgender Female</ion-label>
+							  <ion-radio slot="end" value="transfemale" name="transFemale"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Transgender Male</ion-label>
+							  <ion-radio slot="end" value="transmale" name="transMale"></ion-radio>
+							</ion-item>
+
+							<ion-item lines="none" mode="md">
+							  <ion-label>Transgender</ion-label>
+							  <ion-radio slot="end" value="transgender" name="transgender"></ion-radio>
+							</ion-item>
+						</ion-radio-group>
+					</div>
+				</ion-col>	
+				
+				<ion-col size="12">
+					<ion-button expand="block" *ngIf="requiredFields" class="submit_btn" type="submit">Submit</ion-button>
+					<ion-button expand="block" *ngIf="!requiredFields" class="submit_btn" type="submit" disabled>Submit</ion-button>
+				</ion-col>	
+
+			</ion-row>
+		</form >
+		
+		
+		
+	</ion-grid>
+
+
+</ion-content>

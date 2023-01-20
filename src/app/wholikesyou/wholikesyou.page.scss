@@ -1,0 +1,79 @@
+
+.num_likes{
+	background:var(--ion-color-primary-contrast, #ffffff);
+	color:var(--ion-color-primary, #FD671D);
+	border:2px solid var(--ion-color-primary, #FD671D);
+	display: inline-block;
+    padding: 10px 28px;
+	font-size:18px;
+    border-radius: 20px;
+	box-shadow:0 0px 4px 0 rgb(0 0 0 / 20%), 0 0px 18px 0 rgb(0 0 0 / 25%);
+}
+
+.num_likes ion-icon{
+	vertical-align: text-top;
+}
+
+.seelikes{
+	font-weight:bold;
+}
+
+.peopleliked, .plus_peopleliked{
+	box-shadow:0 0px 4px 0 rgb(0 0 0 / 20%), 0 0px 18px 0 rgb(0 0 0 / 25%);
+	padding-bottom:5px;
+	border-radius:16px;
+}
+
+.peopleliked img{
+	border-radius:16px 16px 0 0;
+	-webkit-filter: blur(5px);
+}
+
+
+.user_img{
+	border-radius:16px 16px 0 0;
+	height:120px;
+	overflow:hidden;
+	border-radius:16px 16px 0 0;
+}
+
+.online_status{
+	text-align:center;
+	margin:10px 0;
+}
+
+
+.like_btn{
+	font-size:18px;
+	height:45px;
+	margin:0 20px;
+	text-transform:capitalize;
+	--border-radius:20px;
+}
+
+
+
+.buttoncenter{
+	text-align: -webkit-center;
+}
+
+.webpageadjust{
+	min-width: 360px !important;
+	width:22%;
+}
+
+
+.online_status ion-icon{
+	font-size:12px !important;
+	filter:invert(76%) sepia() saturate(9977%) hue-rotate(61deg);
+}
+
+@media only screen and (min-width: 767px){
+
+	.webpageadjust{
+		width: 20%;
+		min-width: 400px;
+	}
+
+}
+

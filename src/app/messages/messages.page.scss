@@ -1,0 +1,75 @@
+.chat_search{
+	--border-radius:30px;
+	--icon-color: var(--ion-color-primary, #D0111A);
+	--background: var(--ion-color-light, #f4f5f8);
+}
+
+.profile_img{
+	height:50px;
+	width:50px;
+	overflow:hidden;
+	border-radius:50%;
+}
+
+
+
+.allmessages{
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.all_messages ion-item ion-row{
+	width:100%;
+}
+
+.verticalalign{
+	align-self:center;
+	padding-top:15px;
+	}
+
+
+.user_details .name{
+	margin:10px 0;
+}
+
+.user_details .chats, .chat_time{
+	font-size:14px;
+	color:var(--ion-color-medium, #92949c);
+}
+
+.user_details .chats{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 24ch;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.online{
+	color:var(--ion-color-primary, #FD671D);
+	margin:6px 0;
+}
+
+.offline{
+	color:var(--ion-color-medium, #92949c);
+	margin:6px 0;
+}
+
+.online ion-icon, .offline ion-icon{
+	font-size:8px;
+}
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+		margin: auto;
+	    min-width: 400px;
+	}
+
+}
+

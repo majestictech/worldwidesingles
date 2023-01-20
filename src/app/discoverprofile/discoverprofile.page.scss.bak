@@ -1,0 +1,167 @@
+.back_btn{
+	margin:15px;
+}
+.webdots_icn{
+	color:var(--ion-color-primary, #FD671D);
+	font-size:32px;
+	margin-right:6px;
+}
+
+.profile_images ion-buttons{
+	display: inline-block; 
+	z-index:2;
+	position:absolute;
+}
+
+.profile_images{
+
+	height:50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.instagram, .gender, .hobbieslist{
+	font-size:14px;
+	color:var(--ion-color-medium-shade, #808289);
+}
+
+.hobbieslist{
+	margin:10px 0;
+}
+	
+.instagram span, .gender span{
+	color:var(--ion-color-primary, #FD671D) !important;
+	text-transform:capitalize;
+}
+
+
+.dots_icn{
+	color:var(--ion-color-primary, #FD671D);
+	float:right;
+	font-size:32px;
+	margin:15px;
+	z-index:2;
+	position:relative;
+}
+
+ion-slides{
+	width:100%;
+	top:0;
+	position:absolute;
+}
+
+ion-content{
+	position:relative;
+}
+
+ion-slides img{
+	width: auto;
+}
+
+
+ion-slide{
+	width:100% !important;
+}
+
+
+.name{
+	font-size: 22px;
+    font-weight: bold;
+	margin:10px 0;
+	color:var(--ion-color-warning-contrast, #000000);
+}
+
+.name span{
+	font-weight:normal !important;
+}
+
+.lightback{
+	background:var(--ion-color-light, #f4f5f8);
+	border-radius:10px;
+	padding:10px;
+}
+
+.profile_details{
+	top: 45%;
+    position: absolute;
+    z-index: 999;
+	padding: 0 20px;
+	border-radius:60px 60px 0 0;
+	height:auto;
+	background:white;
+	height: 55%;
+	width:100%;
+	overflow-y:auto;
+}
+
+.type{
+	color:var(--ion-color-medium, #92949c);
+	font-weight:bold;
+	margin:10px 0;
+}
+
+
+.designation{
+	color:var(--ion-color-medium, #92949c);
+	font-size:18px;
+}
+
+.designation .location_icn{
+	color:var(--ion-color-primary, #FD671D);
+}
+
+.designation span{
+	font-size:14px;
+}
+
+.bio{
+	font-size:14px;
+	color:var(--ion-color-medium-shade, #808289);
+	 margin: 0 auto;
+	 line-height: 1.5;
+}
+
+.likeornot ion-icon{
+	font-size: 34px;
+    color: var(--ion-color-primary, #FD671D);
+	padding: 10px;
+}
+
+
+.custom-class{
+	width:100% !important;
+}
+
+
+
+@media only screen and (max-width: 600px){
+	ion-header{
+		display:none;
+	}
+}
+
+
+@media only screen and (min-width: 767px){
+	.back_btn,.dots_icn{
+		display:none;
+	}
+	
+	.profile_images{
+		width: 22% !important;
+		position: relative !important;
+		margin:auto;
+		min-width: 400px;
+		min-height: 12%;
+		height: 24%;
+	}
+	.profile_details{
+		width: 22% !important;
+		margin:auto;
+		top:20%;
+		min-width: 400px;
+		position: relative;
+	}
+}
+
+
+

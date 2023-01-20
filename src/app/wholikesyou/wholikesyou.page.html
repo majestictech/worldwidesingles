@@ -1,0 +1,78 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+	<ion-title class="ion-text-center">Likes You</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+	
+	<ng-container *ngIf= "loginUser.plusMember == 'No'">
+	<ion-grid class="webpageadjust">
+		<ion-row>
+			<ion-col size="12" class="ion-text-center">
+				<ng-container *ngIf="length > 1">
+					<p class="num_likes"><ion-icon name="heart"></ion-icon> {{length}} Likes</p>
+				</ng-container>
+				
+				<ng-container *ngIf="length <=  1">
+					<p class="num_likes"><ion-icon name="heart"></ion-icon> {{length}} Like</p>
+				</ng-container>
+				<p class="seelikes">Upgrade to Plus to see people who likes you.</p>	
+			</ion-col>					
+		</ion-row>
+		
+		<ion-row >
+			<ion-col size="6" class="ion-padding-horizontal" *ngFor="let user of users">
+				<div class="peopleliked">
+					<div class="user_img">
+						<img src="data:image/png;base64,{{user.image}}" />	
+					</div>
+					<p class="online_status"><ion-icon name="ellipse"></ion-icon> Recently Active</p>
+				</div>
+			</ion-col>
+		
+		</ion-row>
+		
+		<ion-row class="ion-padding-top">
+			<ion-col size="12" class="buttoncenter ion-padding-top">
+				<ion-button expand="block" class="like_btn" (click)="open_upgradePlans()">See Who Likes You</ion-button>
+			</ion-col>
+		</ion-row>
+		
+	</ion-grid>
+	
+	</ng-container>
+
+
+	<ng-container *ngIf= "loginUser.plusMember  == 'Yes'">
+	<ion-grid class="webpageadjust">
+		<ion-row>
+			<ion-col size="12" class="ion-text-center">
+				<ng-container *ngIf="length > 1">
+					<p class="num_likes"><ion-icon name="heart"></ion-icon> {{length}} Likes</p>
+				</ng-container>
+				
+				<ng-container *ngIf="length <=  1">
+					<p class="num_likes"><ion-icon name="heart"></ion-icon> {{length}} Like</p>
+				</ng-container>
+			</ion-col>					
+		</ion-row>
+		
+		<ion-row >
+			<ion-col size="6" class="ion-padding-horizontal" *ngFor="let user of users">
+				<div class="plus_peopleliked" [routerLink]="['/discoverprofile',user.id]">
+					<div class="user_img">
+						<img src="data:image/png;base64,{{user.image}}" />	
+					</div>
+					<p class="online_status"><ion-icon name="ellipse"></ion-icon> {{user.display_name}}</p>
+				</div>
+			</ion-col>
+		
+		</ion-row>
+		
+	</ion-grid>
+	
+	</ng-container>
+
+</ion-content>

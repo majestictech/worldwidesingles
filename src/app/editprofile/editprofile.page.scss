@@ -1,0 +1,92 @@
+
+.lightback{
+	background:var(--ion-color-light, #f4f5f8);
+	border-radius:20px;
+	border:1px solid var(--ion-color-light-shade, #d7d8da);
+	padding:0 20px;
+	padding-bottom: 10px;
+	margin-top:10px;
+}
+
+.nametitle{
+	font-size:20px;
+	font-weight:bold;
+}
+
+.name{
+	color:var(--ion-color-primary, #FD671D);
+}
+
+
+.appearin{
+	color:var(--ion-color-medium, #92949c);
+	font-size:14px;
+	margin:10px 0;
+}
+
+.lightback ion-datetime{
+	position:absolute;
+	left:22%;
+	width:50%;
+}
+
+
+ion-footer .submit_btn{
+	--border-radius:20px;
+	color:var(--ion-color-secondary-contrast, #ffffff);
+	text-transform:capitalize;
+	height:40px;
+	font-size:18px;
+}
+
+.settings_title{
+	font-weight:bold;
+}
+
+.setting_type{
+	font-size:16px;
+	color:var(--ion-color-medium, #92949c);
+}
+
+.lightback ion-range{
+	--knob-background:var(--ion-color-medium-contrast, #ffffff);
+	--knob-border:1px solid var(--ion-color-primary, #FD671D);
+	padding-top:0px !important;
+}
+
+.lightback ion-item{
+	--background:var(--ion-color-light, #f4f5f8);
+}
+
+.lightback ion-label{
+	font-size:15px;
+	color:var(--ion-color-medium, #92949c);	
+}
+
+
+.lightback ion-radio{
+	width:16px;
+	height:16px;
+	vertical-align: text-top;
+}
+.intrested ion-radio{
+	margin-left:6px;
+}
+
+
+.intrested ion-radio-group ion-label{
+	margin-left:6px;
+}
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+	    min-width: 400px;
+	}
+	
+	ion-footer .submit_btn{
+		width:22%;
+		margin:auto;
+	}
+}
+

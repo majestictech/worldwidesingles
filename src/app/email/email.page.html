@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border"> 
+ <ion-toolbar mode="ios">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="home" text="" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+	
+	<ion-title class="ion-text-center">Email</ion-title>
+
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+	<ion-grid class="ion-padding-horizontal webadjust">
+		<form #form="ngForm" (ngSubmit)="majEmail(form)" method="post">
+			<ion-row>
+				<ion-col size="12">
+					<p class="email_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				</ion-col>
+				
+				<ion-col size="12">
+					<ion-input class="email_input" name="email" value="{{user.user_email}}">		
+					</ion-input>
+				</ion-col>
+				
+				<ion-col size="12">
+					<p class="email_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+				</ion-col>
+
+				<ion-col size="12" >
+					<ion-button class="send_btn" expand="block" (click)="majEmail(form);">Send Verification Email		
+					</ion-button>
+				</ion-col>
+				
+				<ion-col size="12" >
+					<p class="settings_title">New Matches <ion-toggle mode="ios" name="newMatches" checked></ion-toggle></p>
+					<p class="settings_title">New messages <ion-toggle mode="ios" name="newMessages" ></ion-toggle></p>
+					<p class="settings_title">Promotions <ion-toggle mode="ios" name="promotions" ></ion-toggle></p>
+					<p class="offers">I want to recieve news, updates and offers.</p>
+					
+				</ion-col>
+				
+			</ion-row>	
+		</form>
+	</ion-grid>
+
+	
+
+</ion-content>
+
+<ion-footer>
+	<ion-row class="btn_webadjust">
+		<ion-col class="ion-padding-horizontal">
+			<ion-button class="send_btn" expand="block">Unsubscribe from all		
+			</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

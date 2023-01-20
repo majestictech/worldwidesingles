@@ -24,3 +24,188 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+.registerbg {
+    --background: none;
+    background-image: url('/assets/images/bgimage.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo img{
+	width:56%;
+}
+
+
+.addmedia-modal{
+   --height: 100%;
+   --position: absolute; 
+   --display: block;  
+   
+}
+
+.upgradeplans-modal{
+	--position: absolute; 
+	--display: block;  
+	--height:100%;
+}
+
+
+.matched-modal{
+	--position: absolute; 
+    --width: 20%;
+    --min-width: 360px;
+    --height: 55%;
+    --min-height: 564px;
+	--border-radius: 30px;  
+}
+
+
+.logout-modal{
+	--border-radius: 20px;
+    --width: 18% !important;
+    --height: 18% !important;
+    --margin: auto;
+    --min-height: 180px;
+    --min-width: 325px;	
+}
+
+.modal-shadow{
+	top:100%;
+}
+
+
+.share-modal{
+	--border-radius: 20px;  
+	--width: 18% !important;
+	--height: 18% !important;
+	--min-width: 325px;
+    --min-height: 185px;
+}
+
+
+
+.reportuser-modal{
+	--border-radius: 20px; 
+    --width: 18% !important;
+    --height: 40% !important;
+	--min-width:325px;
+	--min-height:388px;	
+}
+
+.profiledesc-modal{
+	--border-radius: 60px 60px 0 0;
+    --backdrop-opacity: 0;
+}
+
+ion-modal::part(backdrop){
+	top:100%;
+}
+
+
+@media only screen and (min-width: 900px){
+	
+
+	.upgradeplans-modal .modal-wrapper {
+		width:22%;
+		min-width:400px;
+	}
+	
+}
+
+
+.footer-md::before{
+	background-image:none !important;
+}
+
+ion-tab-bar{
+	border:none !important;
+}
+
+ion-header ion-title{
+	font-size:22px;
+	font-weight:bold;
+}
+
+.profile_images  .swiper-container-horizontal>.swiper-pagination-bullets {
+	top:58%;
+}
+
+.upgradeplans_details .swiper-pagination-bullets{
+	bottom:0% !important;
+}
+
+
+.swiper-pagination-bullet-active{
+	background:var(--ion-color-primary, #FD671D) !important;
+}
+
+.swiper-pagination-bullet {
+	background:var(--ion-color-dark-tint, #383a3e);
+}
+
+ion-icon {
+	cursor: pointer;
+}
+
+ 
+ .upgrade_section ion-slides .swiper-pagination{
+	bottom:0% !important;
+}
+
+.item-has-focus{
+	--highlight-background:var(--ion-color-primary, #FD671D) !important;
+}
+
+
+ion-footer ion-icon{
+    font-size: 28px;
+}
+
+ion-footer ion-tab-button.tab-selected ion-icon{
+    color: var(--ion-color-primary, #FD671D);
+}
+
+ion-back-button{
+	color:var(--ion-color-primary, #FD671D);
+	margin:0 8px;
+}
+
+ion-button{
+	--box-shadow:none !important;
+	--background-hover:var(--ion-color-primary, #FD671D) !important;
+	--background-activated:var(--ion-color-primary, #FD671D) !important;
+	--background-activated-opacity:1 !important;
+	--background-focused:var(--ion-color-primary, #FD671D) !important;
+	--background-focused-opacity:1 !important;
+	--background-hover-opacity:1 !important;
+}
+
+ion-toolbar{
+	padding:6px !important;
+}
+
+ion-tab-button {
+  --ripple-color: var(--ion-color-medium);
+  --color: var(--ion-color-dark);
+  --color-selected: var(--ion-color-primary, #FD671D) !important;
+}
+
+ion-tab-button.tab-selected ion-icon{
+	color:var(--ion-color-primary, #FD671D) !important;
+}
+
+ion-tab-button.tab-selected {
+  --color-selected: var(--ion-color-light);
+}
+
+
+.tooltip {
+  display: none !important;
+}
+
+
+

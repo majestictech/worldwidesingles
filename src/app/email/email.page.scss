@@ -1,0 +1,70 @@
+
+.email_input{
+	border:2px solid var(--ion-color-light-shade, #d7d8da);
+	border-radius:20px;
+	color:var(--ion-color-medium-shade, #808289);
+	--padding-start:16px;
+}
+
+
+.send_btn{
+	--border-radius:20px;
+	height:50px;
+	text-transform:capitalize;
+	    font-size: 16px;
+    font-weight: bold;
+	
+}
+
+.email_text{
+	font-size: 14px;
+    line-height: 1.4;
+	}
+
+.email_text, .settings_title, .offers{
+	color:var(--ion-color-medium-shade, #808289);
+}
+
+.settings_title{
+	font-size:16px;
+}
+
+.offers{
+	font-size:14px;
+}
+
+
+ion-toggle{
+	width: 32px;
+    vertical-align: middle;
+    height: 15px;
+    --handle-height: 72%;
+	float: right;
+	--background:var(--ion-color-medium-contrast, #ffffff);
+	--handle-background-checked:var(--ion-color-primary, #FD671D);
+	--handle-background:var(--ion-color-light-shade, #d7d8da);
+	--background-checked:var(--ion-color-medium-contrast, #ffffff);
+    --handle-width: 32%;
+	border-radius:20px;
+	border:2px solid var(--ion-color-light-shade, #d7d8da);
+	--handle-box-shadow:none !important;
+}
+
+
+
+ion-toggle.toggle-checked{
+	border:2px solid var(--ion-color-primary, #FD671D);
+}
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+		min-width: 400px;
+	}
+	
+	.btn_webadjust{
+		width: 22%;
+		min-width: 400px;
+		margin: auto;
+	}
+}

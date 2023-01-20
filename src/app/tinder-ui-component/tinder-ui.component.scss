@@ -1,0 +1,189 @@
+.tinder {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  min-height: 680px;
+  //background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.profile_details{
+	/*padding-top:40px;*/
+    width: 50%;
+	min-width:360px;
+    margin: auto;
+}
+
+.tinder--status {
+  position: absolute;
+  top: 38%;
+  margin-top: -30px;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.tinder--status > div {
+  transition: all 0.3s ease-in-out;
+}
+
+.tinder--status svg {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+  filter:invert(52%) sepia(70%) saturate(4938%) hue-rotate(352deg) brightness(101%) contrast(100%);
+}
+
+.tinder--cards {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 88%;
+  overflow: auto;
+  min-height:540px;
+}
+
+.tinder--card {
+  display: inline-block;
+  width: 360px;
+  height: auto;
+  background: #FFFFFF;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  top: 10%;
+}
+
+.moving.tinder--card {
+  transition: none;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.tinder--card img {
+  max-width: 100%;
+ /*max-height: 330px;*/
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  /*width:300px;*/
+  border-radius: 0 0 12px 12px;
+}
+
+.tinder--card h3 {
+  margin-top: 30px;
+  font-size: 30px;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.tinder--card p {
+  margin-top: 24px;
+  font-size: 16px;
+  padding: 0 16px;
+  top:66%;
+  margin: 14px 0;
+  pointer-events: none;
+}
+
+.tinder--buttons {
+  position: absolute;
+  flex: 0 0 100px;
+  text-align: center;
+  bottom: 30%;
+  z-index:999;
+  left: 0;
+  right: 0;
+}
+
+.tinder--buttons button {
+    border-radius: 50%;
+    line-height: 50px;
+    width: 55px;
+    padding: 5px;
+    height: 55px;
+    border: 5px solid #fff;
+    background: var(--ion-color-primary, #FD671D);
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.tinder--buttons button:focus {
+  outline: 0;
+}
+
+.tinder--buttons ion-icon
+{
+	font-size:36px;
+	color:#fff;
+}
+
+.designation{
+	color:var(--ion-color-medium, #92949c);
+	font-size:18px;
+}
+
+.designation .location_icn{
+	color:var(--ion-color-primary, #FD671D);
+}
+
+.designation span{
+	font-size:14px;
+}
+
+.name{
+	font-size: 24px;
+    font-weight: bold;
+	margin:10px 0;
+}
+
+.name span{
+	font-weight:normal !important;
+}
+
+.discover_image{
+	/*height: 330px;
+    width: 300px;*/
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+	transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+.bio{
+	font-size:14px;
+	color:var(--ion-color-medium-shade, #808289);
+	 margin: 0 auto;
+	 line-height: 1.5;
+}
+
+@media only screen and (min-width: 767px){
+	.tinder--cards {
+		min-width:400px;
+		margin:auto;
+		height: 100% !important;
+		min-height:400px;
+	}
+
+	
+
+
+}
+

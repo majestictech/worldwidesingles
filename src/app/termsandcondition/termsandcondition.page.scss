@@ -1,0 +1,18 @@
+
+.tc_text{
+	color:var(--ion-color-medium-shade, #808289);
+	font-size:20px;
+	margin:16px auto;
+}
+
+.tc_title{
+	font-size:24px;
+	margin:5px auto;
+	}
+	
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+	    min-width: 400px;
+	}
+}

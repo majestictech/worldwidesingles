@@ -1,0 +1,50 @@
+
+<ion-content >
+	<ion-grid class="matchedbg">
+		
+		<ion-row>
+			<ion-col size="12" class="ion-text-center">
+				<p class="matched">You're Matched</p>
+				<p class="liked_eachother">You and {{seconduser.display_name}} have both liked each other</p>
+			</ion-col>
+			
+			<ion-col size="6" class="ion-text-right persondetails">
+				<p class="name">{{seconduser.display_name}}</p>
+				<span>{{seconduser.profession}}</span><br/>
+				<span><ion-icon name="location"></ion-icon> {{seconduser.maxDistance}} miles</span>
+			</ion-col>
+			
+			<ion-col size="4" offset="1" class="ion-text-center personimg ">
+				<div class="user_img">
+				<img src="data:image/png;base64,{{seconduser.image}}" />	
+				</div>
+			</ion-col>
+
+			<ion-col size="4" offset="1" class="ion-text-center personimg ion-margin-end ion-margin-top">
+				<div class="user_img">
+					<img src="data:image/png;base64,{{firstuser.image}}" />	
+				</div>
+			</ion-col>
+			
+			<ion-col size="6" class="ion-text-left persondetails ion-margin-top">
+				<p class="name">{{firstuser.display_name}}</p>
+				<span>{{firstuser.profession}}</span><br/>
+				<span><ion-icon name="location"></ion-icon> {{firstuser.maxDistance}} miles</span>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row class="ion-margin-top paddingtop">
+			<ion-col size="12" class="ion-margin-top">
+				<ion-button class="send_msg" expand="block" [routerLink]="['/messages']" routerDirection="forward" (click)="closeModal()">
+				Send a Message
+				</ion-button>
+			</ion-col>
+
+			<ion-col size="12" class="ion-text-center">
+				<p class="goback" [routerLink]="['/home']" (click)="closeModal()" routerDirection="backward">Go Back to Discover</p>
+			</ion-col>
+		</ion-row>
+	
+	</ion-grid>
+
+</ion-content>

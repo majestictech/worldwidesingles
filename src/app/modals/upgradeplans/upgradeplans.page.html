@@ -1,0 +1,84 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+	<ion-title class="ion-text-center"><span class="title">Get WWSINGLES Plus</span>
+	<span><ion-icon name="close-outline" (click)="closeModal()"></ion-icon></span>
+	</ion-title>			
+	
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-slides *ngIf="viewEntered" [options]="slideOptsOne" class="upgradeplans_details"  pager>
+		<ion-slide>
+			<ion-row class="upgrade_plans ion-padding-vertical">
+				<ion-col size="12">
+					<img src="../../../assets/images/Passport Illustration.png" />	
+					<p class="features"><ion-icon name="heart-half" class="heart"></ion-icon> Swipe around the world!</p>	
+					<p class="short_desc">Passport to anywhere!</p>	
+				</ion-col>
+			</ion-row>					
+		</ion-slide>
+
+		<ion-slide>
+			<ion-row class="upgrade_plans ion-padding-vertical">
+				<ion-col size="12">
+					<img src="../../../assets/images/Boost Illustration.png" />	
+					<p class="features"> Get 1 free boost everyday</p>	
+					<p class="short_desc">Skip the queue & get more matches!</p>	
+				</ion-col>
+			</ion-row>					
+		</ion-slide>
+
+		<ion-slide>
+			<ion-row class="upgrade_plans ion-padding-vertical">
+				<ion-col size="12">
+					<img src="../../../assets/images/Unlimited Likes Illustration.png" />	
+					<p class="features"> Unlimited Likes</p>	
+					<p class="short_desc">Swipe right as much as you want</p>	
+				</ion-col>
+			</ion-row>					
+		</ion-slide>
+	
+	</ion-slides>
+
+
+	<ion-row class="ion-margin-top">
+		<ion-col size="10" offset="1" class="all_plans">
+			<div class="switchplans">
+				<div  class="{{selectedTab}}_selected" id="1" (click)="switchTab('planone')">
+					<p class="nummonths">3</p>
+					<span>months</span>
+					<p class="price">USD 14/mo</p>
+				</div>			
+				<div class="{{selectedTab}}_selected" id="2" (click)="switchTab('plantwo')">
+					<p class="mostpopular">Most Popular</p>
+					<p class="nummonths">6</p>
+					<span>months</span>
+					<p class="price">USD 10/mo</p>	
+					<p class="save">Save 50%</p>				
+				</div>
+				<div class="{{selectedTab}}_selected" id="3" (click)="switchTab('planthree')">
+					<p class="nummonths">1</p>
+					<span>month</span>
+					<p class="price">USD 20/mo</p>						
+				</div>		
+			</div>	
+		</ion-col>
+	
+		<ion-col size="12" class="ion-padding-top">
+			<ion-button expand="block" class="continue_btn" (click)="completeModal()">
+				Continue
+			</ion-button>
+		</ion-col>
+
+		<ion-col size="12" class="ion-padding-horizontal ion-text-center termscondition">
+			<p>Recurring billing, cancel</p>
+			<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br/>
+			<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .</span><br/>
+		</ion-col>		
+
+	</ion-row>
+
+
+</ion-content>

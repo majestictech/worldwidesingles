@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="home" text="" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+
+	<ion-title class="ion-text-center">Chat</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+	<ion-row class="webadjust">
+		<ion-col size="12">
+			<ion-searchbar #searchInventory debounce="500" class="chat_search" (ionChange)="getItems($event)">
+			</ion-searchbar>
+		</ion-col>
+	</ion-row>
+
+	<div class="all_messages" class="webadjust">
+		<ion-list *ngFor="let user of users" [routerLink]="['/singlechat',user.user.id]">
+			<ion-item *ngIf="user.user.id !== session" >
+				<ion-col size="2" class="verticalalign" *ngIf="user">
+					<div class="profile_img">
+						<img src="data:image/png;base64,{{user.image}}" />
+					</div>
+				</ion-col>
+
+				<ion-col size="7" class="user_details" *ngIf="user ">
+					<p class="name">{{user.user.name}}</p>
+					<span class="chats">{{user.lastMSG.msg}}</span>
+				</ion-col>
+
+				<ion-col size="3" class="ion-text-center" *ngIf="user">
+					<ng-container *ngIf="user.online ==='Yes'" >
+						<p class="online"><ion-icon class="online" name="ellipse"></ion-icon></p>
+					</ng-container>
+					<ng-container *ngIf="user.online ==='No'" >
+						<p class="offline"><ion-icon class="offline" name="ellipse"></ion-icon></p>
+					</ng-container>
+					<span class="chat_time">{{user.time}}</span>
+				</ion-col>
+
+			</ion-item>
+		</ion-list>
+
+
+	<!--<ion-infinite-scroll #IonInfiniteScroll threshold="100px" (ionInfinite)="loadData('paging', $event)">
+		<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+	</ion-infinite-scroll>-->
+
+
+	</div>
+
+</ion-content>

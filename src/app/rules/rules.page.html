@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="home" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+	<ion-grid class="webadjust">
+		<ion-row class="ion-padding-horizontal">
+			<ion-col size="12">
+				<img class="rules_img" src="../assets/images/Welcome Dater Illustration.png" />	
+			</ion-col>
+
+			<ion-col size="12" class="ion-text-center">
+				<p class="welcome">Welcome to WWSINGLES</p>	
+				<p class="follow_rules">Please follow these rules when using this app.</p>
+			</ion-col>
+
+			<ion-col size="6" >
+				<p class="rules_title">Be yourself.</p>	
+				<p class="rules_desc">Upload your own photos, age and bio that's yours</p>
+			</ion-col>
+			
+			<ion-col size="6" >
+				<p class="rules_title">Be cool.</p>	
+				<p class="rules_desc">Upload your own photos, age and bio that's yours</p>
+			</ion-col>
+
+			<ion-col size="6" >
+				<p class="rules_title">Be safe.</p>	
+				<p class="rules_desc">Upload your own photos, age and bio that's yours</p>
+			</ion-col>
+
+			<ion-col size="6" >
+				<p class="rules_title">Be active.</p>	
+				<p class="rules_desc">Upload your own photos, age and bio that's yours</p>
+			</ion-col>
+
+			<ion-col size="12" >
+				<ion-button expand="block" class="understand_btn"  [routerLink]="['/home']">
+				I Understand
+				</ion-button>
+			</ion-col>			
+			
+		</ion-row>
+	</ion-grid>
+</ion-content>
+
+<ion-footer class="ion-text-center" >
+	<p class="terms" [routerLink]="['/termsandcondition']">Terms of Use and Privacy Policy</p>
+
+</ion-footer>
+

@@ -1,0 +1,168 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="home" text="" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+	
+	<ion-title class="ion-text-center">Settings</ion-title>
+	
+	<span slot="end">
+		<p class="done_btn" (click)="majSettingsEdit(form);" type="submit" >Done</p>
+	</span>
+	
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+	<ion-grid class="ion-padding-horizontal webadjust">
+	<form #form="ngForm" (ngSubmit)="majSettingsEdit(form)" method="post">
+		<ion-row>
+			<ion-col size="12">
+				<div class="plus_banner">
+				<p class="plus_head"><ion-icon name="heart"></ion-icon> WWSINGLES Plus</p>
+				<p class="unlimted_likes">Unlimited likes & more!</p>
+				</div>
+			</ion-col>
+
+			<ion-col size="6">
+				<div class="boost_banner">
+				<p class="boost_head"><ion-icon name="flash"></ion-icon> Get Boosts</p>
+				</div>
+			</ion-col>
+
+			<ion-col size="6">
+				<div class="like_banner">
+				<p class="like_head"><ion-icon name="star"></ion-icon> Get Super Likes</p>
+				</div>
+			</ion-col>
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Personal Info</p>
+					<p class="setting_type" [routerLink]="['/username']"> Username <ion-icon name="chevron-forward"></ion-icon></p>
+					<p class="setting_type" [routerLink]="['/email']"> Email <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>	
+			
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="setting_type" [routerLink]="['/', 'phonenumber', env.APP_USER_ID]"> Phone Number <span class="contact_num">{{contactNumber}}</span> <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Location</p>
+					<p class="setting_type"><ion-icon name="location" class="location_icn"></ion-icon> Current location <ion-icon name="checkmark-circle" class="verified_icn"></ion-icon></p>
+					<p class="new_location"> Add new location </p>
+				</div>
+			</ion-col>	
+
+			<!--<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Show Me</p>
+					<p class="setting_type" [routerLink]="['/showme']"> Women <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>-->
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Distance preference<span>{{maxDistance}} Km.</span></p>
+					<ion-range mode="md" min="2" step="2" name="maxDistance" color="primary" [(ngModel)]='maxDistance' pin="true"></ion-range>					  
+				</div>
+			</ion-col>	
+			
+			
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Age preference<span>{{agePreference.lower}}-{{agePreference.upper}}</span></p>
+					<ion-range mode="md" dualKnobs="true" name="agePreference" color="primary" pin="true" [(ngModel)]='agePreference' (ionChange)="checkValue($event);"></ion-range>
+				</div>
+			</ion-col>	
+			
+			
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Share my feed <ion-toggle mode="ios" name="shareFeed" checked></ion-toggle></p>
+				</div>
+			</ion-col>	
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Recommended sort <ion-toggle mode="ios" name="recommendedSort"></ion-toggle></p>
+				</div>
+			</ion-col>	
+			
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Data Usage</p>
+					<p class="setting_type"> Autoplay videos <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>	
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Show me in Top Picks <ion-toggle mode="ios" name="topPick" checked></ion-toggle></p>
+				</div>
+			</ion-col>	
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Swipe Surge <ion-toggle mode="ios" name="swipeSurge"></ion-toggle></p>
+				</div>
+			</ion-col>			
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Active Status <ion-toggle mode="ios" name="activeStatus" [(ngModel)]="active" (ionChange)="checkValue($event);" ></ion-toggle></p>
+				</div>
+			</ion-col>
+			
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Show Distance in</p>
+					<ion-radio-group value="km">
+						<ion-item lines="none" mode="md">
+						  <ion-label>Km.</ion-label>
+						  <ion-radio slot="end" value="km" name="km"></ion-radio>
+						</ion-item>
+
+						<ion-item lines="none" mode="md" class="margin">
+						  <ion-label>Mi.</ion-label>
+						  <ion-radio slot="end" value="mi" name="mi"></ion-radio>
+						</ion-item>
+					</ion-radio-group>
+				</div>
+			</ion-col>	
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Payment Account</p>
+					<p class="setting_type"> Manage payment account <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>
+
+			<ion-col size="12">
+				<div class="lightback">
+					<p class="settings_title">Contact Us</p>
+					<p class="help" [routerLink]="['/contactus']"> Help & Support <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>	
+			
+			<ion-col size="12" (click)="shareLink()" >
+				<div class="lightback" >
+					<p class="settings_title"> Share WWSINGLES <ion-icon name="chevron-forward"></ion-icon></p>
+				</div>
+			</ion-col>				
+
+			<ion-col size="12" >
+				<ion-button expand="block" class="logout" (click)="open_LogoutPage()">Logout
+				</ion-button>
+			</ion-col>	
+
+		</ion-row>	
+		
+	</form>
+	</ion-grid>
+
+
+</ion-content>

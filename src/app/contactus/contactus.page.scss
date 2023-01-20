@@ -1,0 +1,35 @@
+.lightback{
+	background:var(--ion-color-light, #f4f5f8);
+	border-radius:20px;
+	border:1px solid var(--ion-color-light-shade, #d7d8da);
+	padding:0 20px;
+	margin-top:10px;
+}
+
+.lightback ion-icon{
+	vertical-align: text-bottom;
+	float:right;
+}
+
+
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		min-width: 400px;
+		width: 22%;
+	}
+}
+
+
+.contact_title{
+	font-weight:bold;
+	color:var(--ion-color-primary, #FD671D);
+}
+
+
+.lightback ion-icon{
+	color:var(--ion-color-primary, #FD671D);
+	font-size:20px;
+}
+
+

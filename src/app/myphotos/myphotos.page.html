@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="profile" text="" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+
+	<ion-title class="ion-text-center">My Photos</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+	<ion-grid class="webadjust">
+		<p class="dragdrop">Add your photos here!</p>
+		<p class="note">Note: Your first uploaded image will be your display picture.</p>
+		
+		<!--
+		<ion-list>
+			<ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
+
+			<ion-item *ngFor="let animal of animals">
+			  <ion-label>
+				
+			  </ion-label>
+			  <ion-reorder slot="end"></ion-reorder>
+			</ion-item>
+			</ion-reorder-group>
+		</ion-list>
+		-->
+		
+		<!--
+		<ion-list>
+			<ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
+
+				<ion-item *ngFor="let photo of (photos)">
+				  <div class="picture">
+						<img src="data:image/png;base64,{{photo.image}}" />
+						<ion-badge color="primary" (click)="showConfirm(photo.id)"><ion-icon name="close"></ion-icon></ion-badge>
+					</div>
+				  <ion-reorder slot="end"></ion-reorder>
+				</ion-item>				
+			</ion-reorder-group>
+			
+			<ion-item *ngFor="let photo of (blankPhotos)">
+				<div class="picture">
+					<ion-badge color="primary"><ion-icon name="add" (click)="selectImage(userImage)"></ion-icon></ion-badge>
+					<input id="userImage" #userImage name="file" type="file" accept="image/x-png,image/jpeg" hidden (change)="attachFile($event)" />
+				</div>
+			</ion-item>
+		</ion-list>
+		-->
+		
+		<ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
+		<div class="allphotos">
+			<ion-row class="ion-padding-horizontal">
+							
+				<ion-col size="4" *ngFor="let photo of (photos)">	
+					<div class="picture">
+						<img src="data:image/png;base64,{{photo.image}}" />
+						<ion-badge color="primary" (click)="showConfirm(photo.id)"><ion-icon name="close"></ion-icon></ion-badge>
+					</div>		
+				</ion-col>				
+
+
+				<ion-col size="4" *ngFor="let nophoto of (blankPhotos)">
+					<div class="picture">
+						<ion-badge color="primary"><ion-icon name="add" (click)="selectImage(userImage)"></ion-icon></ion-badge>
+						<!--<ion-badge color="primary">
+							 <ion-button fill="clear"  color="medium" size="large" (click)="selectImage(userImage)"></ion-button>
+						</ion-badge>-->
+					</div>			
+				</ion-col>
+				
+				<input id="userImage" #userImage name="file" type="file" accept="image/x-png,image/jpeg" hidden (change)="attachFile($event)" />
+			
+			</ion-row>
+			
+		</div>
+		</ion-reorder-group>
+	</ion-grid>
+
+
+</ion-content>
+
+
+

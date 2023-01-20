@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+	<ion-buttons slot="start">
+		<ion-back-button defaultHref="home" text="" [icon]="buttonIcon"></ion-back-button>
+	</ion-buttons>
+	
+	<ion-title class="ion-text-center">Discover Profile</ion-title>
+	
+	<span slot="end">
+		<ion-icon name="ellipsis-horizontal" class="webdots_icn" (click)="presentActionSheet()"></ion-icon>
+	</span>
+
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+		<div class="profile_images">
+
+			<ion-buttons slot="start" mode="ios">
+				<ion-back-button class="back_btn" text="" defaultHref="home" [icon]="buttonIcon"></ion-back-button>
+			</ion-buttons>
+			
+			<span>
+				<ion-icon name="ellipsis-horizontal"  class="dots_icn" (click)="presentActionSheet()" ></ion-icon>
+			</span>
+
+			<ion-slides [options]="slideOpt"  autoplay="true" loop="true" slide-interval="30000" pager>
+			  <ion-slide *ngFor="let user of photos">
+				<img class="custom-class" src="data:image/png;base64,{{user.image}}"/>
+			  </ion-slide>
+			</ion-slides>
+	  
+		</div>
+		
+		
+		
+		<!--<div class="profile_details" id="drag">
+			<ion-row>				
+				<ion-col size="12" class="ion-text-center likeornot">	
+					<ng-container *ngIf="ifMatch == false">					
+						<ion-icon id="0" (click)="clicked($event)" name="close-outline"></ion-icon>
+						<ion-icon id="1" (click)="clicked($event)" name="heart-outline"></ion-icon>		
+					</ng-container>
+				</ion-col>			
+				<ion-col size="12" class="ion-text-center">
+					<p class="name">{{user.display_name}}, <span>{{user.age}}</span></p>
+					<p class="designation">{{user.profession}} <span> <ion-icon name="location" class="location_icn"></ion-icon> {{user.maxDistance}} miles</span></p>
+				</ion-col>	
+				<ion-col size="12" class="ion-text-center lightback">
+					<p class="bio">{{user.bio}}</p>
+				</ion-col>	
+				<ion-col size="12" class="ion-text-center">
+					<p class="gender">Gender: <span>{{user.gender}}</span></p>
+					<p class="instagram">Instagram: <span>{{user.instagram}}</span></p>
+				</ion-col>	
+				<ion-col size="12" class="ion-text-center">
+					<p class="type">Hobbies</p>
+					<p class="hobbieslist">{{user.hobbies}}</p>
+				</ion-col>	
+			</ion-row>
+		</div>-->
+</ion-content>
+
+
+
+
+

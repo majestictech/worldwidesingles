@@ -1,0 +1,24 @@
+
+.username_input{
+	border:2px solid var(--ion-color-light-shade, #d7d8da);
+	border-radius:20px;
+	color:var(--ion-color-medium-shade, #808289);
+	--padding-start:16px;
+}
+
+
+.confirm_btn{
+	--border-radius:20px;
+	height:50px;
+	text-transform:capitalize;
+	font-size: 16px;
+    font-weight: bold;
+	
+}
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+	    min-width: 400px;
+	}
+}

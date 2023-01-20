@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start" mode="ios">
+			<ion-back-button defaultHref="home" text="" [icon]="buttonIcon"></ion-back-button>
+		</ion-buttons>
+		<ion-title class="ion-text-center">{{user.display_name}}</ion-title>
+
+		<span slot="end" class="profilepic">
+			<div class="profile_img" *ngIf="user">
+				<img src="data:image/png;base64,{{user.image}}"/>
+			</div>
+		</span>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content padding #content [scrollEvents]="true">
+	<div class="all_messages">	
+		<ion-grid class="ion-padding-horizontal webadjust">		
+			<ng-container *ngIf="messages.length==0">
+				<p class="chatnow_matched">You're matched on WWSINGLES</p>
+				<p class="chatnow">Say 'Hi' to your new friend.</p>
+			</ng-container>
+			<ng-container *ngIf="messages.length!=0">
+					<ng-container *ngFor="let mess of messages" >	
+						<ion-row>
+							<ion-col size="12" class="verticalalign ion-text-center">
+								{{setChatDay(08/23/2022 | date: 'shortDate')}}
+								 <!-- convert to shortDate as date has time also and we need to check date only -->
+								<p class="chatday">{{chatday | date:'EEEE'}}</p>
+							</ion-col>
+						</ion-row>			
+							<!--<ng-container *ngIf="users.senderId  != env.APP_USER_ID && users.receiverId  == env.APP_USER_ID">-->
+							<ng-container *ngIf="mess.from!==session">
+							
+								<ion-row>
+									<ion-col size="2" class="verticalalign ion-text-center">
+										<img src="data:image/png;base64,{{user.image}}" />	
+									</ion-col>
+									<ion-col size="10">
+										<p class="chat">{{mess.msg}}</p>
+										<span class="chat_time">{{formatDate(mess)}}</span>
+									</ion-col>			
+								</ion-row>
+							</ng-container>						
+							<ng-container *ngIf="mess.from==session">
+								<ion-row >
+									<ion-col size="12" class="ion-text-right">
+										<p class="mychat">{{mess.msg}}</p><br/>
+										<span class="mychat_time">{{formatDate(mess)}}</span>
+									</ion-col>			
+								</ion-row>			
+							</ng-container>		
+					</ng-container>
+			</ng-container>		
+		</ion-grid>
+	</div>
+</ion-content>
+<ion-footer>
+	<ion-row class="paddingtop">	
+		<ion-col size="9" offset="1" class="message">
+			<ion-input #inputId autofocus="true" name="message" [(ngModel)]="chat"  placeholder="Type a message" (keyup.enter)="sendChat()">
+			</ion-input>
+		</ion-col>
+		
+		<ion-col size="2" class="send ion-text-center">
+			<ion-button (click)="sendChat()" class="send_btn" type="submit"><ion-icon name="paper-plane"  name="send" slot="end" padding></ion-icon></ion-button>
+		</ion-col>		
+	</ion-row>
+</ion-footer>
+

@@ -1,0 +1,25 @@
+.createacc_btn{
+	--background:var(--ion-color-primary-contrast, #ffffff);
+	color:var( --ion-color-dark-tint, #383a3e);
+	--border-radius: 25px;
+    font-size: 12px;
+	position: fixed;
+    left: 20px;
+    bottom: 15%;
+    right: 20px;
+}
+
+.signin_btn{
+	color:var(--ion-color-primary-contrast, #ffffff);
+	--border-radius: 25px;
+    font-size: 12px;
+	--border-color:var(--ion-color-primary-contrast, #ffffff);
+	position: fixed;
+    left: 20px;
+    bottom: 8%;
+    right: 20px;
+}
+
+.logo{
+	padding-top:70px;
+}

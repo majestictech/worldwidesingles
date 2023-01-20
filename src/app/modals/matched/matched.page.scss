@@ -1,0 +1,65 @@
+.matched{
+	font-size:30px;
+	color:var(--ion-color-medium-contrast, #ffffff);
+	font-weight: bold;
+	margin:20px;
+}
+.matchedbg{
+	background: #fff url("/assets/images/matchedBg.png") 0 0/100% 85% no-repeat !important;
+}
+
+.liked_eachother{
+	font-size:15px;
+	color:var(--ion-color-medium-contrast, #ffffff);
+}
+
+.persondetails .name{
+	font-size:18px;
+	color:var(--ion-color-medium-contrast, #ffffff);
+	margin:10px 0;
+}
+
+
+.persondetails span{
+	color:var(--ion-color-medium-contrast, #ffffff);
+	line-height: 1.8;
+	font-size:14px;
+}
+
+/*.personimg img{
+    
+	height:100px;
+}*/
+
+
+.user_img{
+	border-radius: 55%;
+	height:100px;
+	width:100px;
+	overflow:hidden;
+	
+}
+
+.paddingtop{
+	padding-top:15%;
+}
+
+
+.send_msg{
+	--border-radius:20px;
+	font-size:16px;
+	height:45px;
+
+	font-weight:bold;
+}
+
+.goback{
+	color:var(--ion-color-light-shade, #d7d8da);
+	font-size:16px;
+	margin:5px 0;
+	margin:5px 0;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+

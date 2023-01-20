@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1005714911219",
+    "firebase_url": "https://pushnotify-152610.firebaseio.com",
+    "project_id": "pushnotify-152610",
+    "storage_bucket": "pushnotify-152610.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005714911219:android:fd0a0c73b74d9dc9",
+        "android_client_info": {
+          "package_name": "com.foodondeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005714911219-dk8u62jmu8k6r4vuo1tsh95g77mg5ug7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiv_TFE9EWqO694tjU_u7luVP4yFUnIII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005714911219-dk8u62jmu8k6r4vuo1tsh95g77mg5ug7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005714911219:android:edf1ccf65d09e4874e6c86",
+        "android_client_info": {
+          "package_name": "com.maj.notify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005714911219-dk8u62jmu8k6r4vuo1tsh95g77mg5ug7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiv_TFE9EWqO694tjU_u7luVP4yFUnIII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005714911219-dk8u62jmu8k6r4vuo1tsh95g77mg5ug7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

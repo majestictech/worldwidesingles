@@ -1,0 +1,130 @@
+
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-row>
+			<ion-col class="ion-padding-start ion-padding-top">
+				<ion-icon name="settings-outline" [routerLink]="['/', 'settings', env.APP_USER_ID]"></ion-icon>
+			</ion-col>
+		</ion-row>
+	</ion-toolbar> 
+</ion-header>
+
+<ion-content>
+
+	<ion-grid class="webadjust">
+		<ion-row>
+			<ion-col size="12" class="verticalalign ion-text-center ion-margin-top">
+				<div class="mainprofile">			
+					<div class="profile_img">
+						<ng-container *ngIf="!user.image && user.gender=='male'">
+							<img src="../../assets/images/userimg_m.png"/>
+						</ng-container>
+						
+						<ng-container *ngIf="!user.image && user.gender=='female'">
+							<img src="../../assets/images/userimg_f.png"/>
+						</ng-container>
+
+
+						<ng-container  *ngIf="user.image">
+							<img src="data:image/png;base64,{{user.image}}"/>
+						</ng-container>
+					</div>
+					
+					<p class="editprofile" [routerLink]="['/myphotos']"><ion-icon name="pencil-outline"></ion-icon></p>	
+					
+				</div>
+			</ion-col>	
+			
+			<ion-col size="12" class="ion-text-center">
+				<p class="name">{{user.display_name}}, <span>{{user.age}}</span></p>
+				<p class="instagram">Instagram: <span>{{user.instagram}}</span></p>
+			</ion-col>	
+
+			<ion-col size="12" class="ion-text-center">
+				<ion-button [routerLink]="['/', 'editprofile', env.APP_USER_ID]" class="profie_edit"><ion-icon class="edit_icn" name="cog"></ion-icon> Edit Profile</ion-button>
+			</ion-col>	
+			
+		</ion-row>
+		
+		<div class="upgrade_section">
+				<ng-container *ngIf= "user.plusMember  == 'Yes'">
+					<p class="plus_mem">You are a <span>Plus</span> Member</p>
+					<!--<p class="plus_mem_ben">Enoy the following benefits.</p>-->
+				</ng-container>
+		
+		
+			<ion-slides *ngIf="viewEntered" [options]="slideOptsOne"  slide-interval="100" pager>
+				<ion-slide>
+					<ion-row class="upgrade_plans ion-padding-vertical">
+						<ion-col size="12">
+							<p class="features">Get matches faster</p>	
+							<p class="short_desc">Boost your profile once a month!</p>	
+						</ion-col>
+					</ion-row>					
+				</ion-slide>
+
+				<ion-slide>
+					<ion-row class="upgrade_plans ion-padding-vertical">
+						<ion-col size="12">
+							<p class="features">Swipe around the world!</p>	
+							<p class="short_desc">Passport to anywhere!</p>	
+						</ion-col>
+					</ion-row>							
+				</ion-slide>	
+
+				<ion-slide>
+					<ion-row class="upgrade_plans ion-padding-vertical">
+						<ion-col size="12">
+							<p class="features">Unlimited Likes</p>	
+							<p class="short_desc">Swipe right as much as you want</p>	
+						</ion-col>
+					</ion-row>							
+				</ion-slide>			
+			
+			</ion-slides>
+			
+				<ion-row class="ion-padding-top ion-margin-horizontal">
+					<ion-col size="12" class="upgrade_btn ion-padding-vertical">
+						<ng-container *ngIf= "user.plusMember  == 'No'">
+							<ion-button expand="block" class="plus_btn" (click)="open_upgradePlans()">
+								WWSINGLES Plus
+							</ion-button>
+						</ng-container>
+					</ion-col>	
+				</ion-row>
+			
+		</div>
+		
+		
+	</ion-grid>
+</ion-content>
+
+
+	<!--<ion-footer class="ion-no-padding ion-no-margin">
+		<ion-toolbar>
+		<ion-tabs>
+			<ion-tab-bar slot="bottom">
+
+				<ion-tab-button [routerLink]="['/wholikesyou']">
+				<ion-icon name="heart-outline"></ion-icon>
+				</ion-tab-button>
+
+				<ion-tab-button [routerLink]="['/home']">
+				<ion-icon name="grid-outline"></ion-icon>
+				</ion-tab-button>
+
+				<ion-tab-button [routerLink]="['/messages']">
+				<ion-icon name="chatbubbles-outline"></ion-icon>
+				</ion-tab-button>
+
+				<ion-tab-button [routerLink]="['/', 'profile', env.APP_USER_ID]">
+				<ion-icon name="person-outline"></ion-icon>
+				</ion-tab-button>
+
+			</ion-tab-bar>
+		</ion-tabs>
+		</ion-toolbar>
+	</ion-footer>-->
+	
+
+

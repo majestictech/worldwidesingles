@@ -1,0 +1,46 @@
+.rules_img{
+	width:100%;
+}
+
+.welcome{
+	font-size:24px;
+	font-weight:bold;
+}
+
+.follow_rules{
+	font-size:20px;
+}
+
+.rules_title{
+	font-size: 18px;
+    margin: 0 12px;
+}
+
+.rules_desc{
+	font-size:14px;
+	color:var(--ion-color-medium, #92949c);
+	line-height: 1.7;
+	border: 1px solid var( --ion-color-light-shade, #d7d8da);
+    padding: 10px 16px;
+    border-radius: 12px;
+}
+
+.understand_btn{
+	--border-radius:20px;
+	text-transform:capitalize;
+	height:44px;
+	font-size:16px;
+	font-weight: bold;
+}
+
+.terms{
+	color:var(--ion-color-medium-tint, #9d9fa6);
+	cursor:pointer;
+}
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+	    min-width: 400px;
+	}
+}

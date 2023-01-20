@@ -1,0 +1,142 @@
+.login_btn{
+	--border-color:var(--ion-color-light-tint, #f5f6f9);
+	--border-radius: 25px;
+	color:var(--ion-color-primary-contrast, #ffffff);
+	font-size: 12px;
+	margin-left: 14px;
+    margin-right: 14px;
+	margin-top:20px;
+}
+
+.border ion-item{
+	--background: transparent;
+}
+
+.border ion-input{
+	--border:2px solid var(--ion-color-light-tint, #f5f6f9);
+	border:2px solid var(--ion-color-light-tint, #f5f6f9);
+	--padding-start:10px;
+	border-radius:25px;
+	--border-radius:25px;
+	color:var(--ion-color-primary-contrast, #ffffff);
+}
+
+
+
+.logo{
+	text-align:center;
+	width:42%;
+}
+
+/*.border{
+	bottom: 10%;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+}*/
+
+
+.help{
+	font-size: 14px;
+	text-align:center;
+	color:var(--ion-color-primary-contrast, #ffffff);
+	}
+	
+	
+.help span{
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.orangebg{
+	--background: #989898 url("/assets/images/homepage.jpg")!important;
+}
+
+.navbar{
+	align-self:center;
+}
+
+.navbar a{
+	margin: 10px 30px;
+	display:inline-block;
+	color:var(--ion-color-primary-contrast, #ffffff);
+	cursor:pointer;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+.title{
+	color:var(--ion-color-primary-contrast, #ffffff);
+	font-size:56px;
+	padding-left:10px;
+}
+
+.navbar a:hover{
+	color:var(--ion-color-primary, #FD671D);
+}
+
+
+.blackbg{
+	--background:rgba(0, 0, 0, 0.74);
+	position:fixed;
+}
+
+ion-footer{
+	background:#333333;
+}
+
+.footer_text p{
+	color:var(--ion-color-primary-contrast, #ffffff);
+}
+
+@media only screen and (max-width: 767px) {
+	ion-header{
+		display:none;
+	}
+	ion-footer{
+		display:none;
+	}
+	
+	.border{
+	width: 100% !important;
+	margin:auto;
+	margin-top:6vh;
+	text-align:center;
+	}
+	
+	.border form{
+	margin-top:20vh;
+	}
+
+	.orangebg{
+		  --background:#fff url("/assets/images/DaterBg.png") 0 100%/100% 76% no-repeat !important;
+	}
+
+	.title{
+		display:none;
+	}
+
+}
+
+@media only screen and (min-width: 767px){
+	.logo{
+		display:none;
+	}
+	
+	.border{
+		width: 22%;
+		margin:auto;
+		min-width:440px !important;
+		margin-top:24vh;
+		text-align:center;
+	}	
+	
+	.login_btn{
+		--background-hover:var(--ion-color-primary, #FD671D);
+		--background:var(--ion-color-primary-shade, #df5b1a);
+		--background-hover-opacity:1;
+	}
+
+}
+

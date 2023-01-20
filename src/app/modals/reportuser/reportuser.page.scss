@@ -1,0 +1,19 @@
+.title{
+	font-size:26px;
+	font-weight:bold;
+	margin:14px;
+}
+
+ion-item{	
+	--padding-start: 0px;
+	--inner-padding-end:0px;
+}
+
+.tellus{
+	padding: 0 15px;
+    font-size: 17px;
+    line-height: 1.7;
+	width: 100%;
+	margin: 14px 0;
+	color:var(--ion-color-medium, #92949c);
+	}

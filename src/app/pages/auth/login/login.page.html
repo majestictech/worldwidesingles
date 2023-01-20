@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border"> 
+ <ion-toolbar mode="ios" class="blackbg">
+	<ion-row class="ion-padding-horizontal">
+		<ion-col size="5" class="ion-text-center">
+			<img src="../../../assets/images/wwsingleslogo_150.png" class="head_logo" />
+		</ion-col>
+
+		<ion-col size="7" class="navbar ion-text-center">
+			<a href="https://majestictechnosoft.com/wwsingles/" >Home</a>		
+			<a href="https://majestictechnosoft.com/wwsingles/about">About</a>
+			<a href="https://majestictechnosoft.com/wwsingles/services">Services</a>
+			<a href="https://majestictechnosoft.com/wwsingles/contact">Contact Us</a>
+		</ion-col>
+	
+	</ion-row>
+	
+
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content class="orangebg">
+
+
+<div class="border">
+
+	<img src="../../../assets/images/wwsingleslogo.png" class="logo" />
+	<ion-item lines="none">
+		<p class="title">Members Login</p>
+	</ion-item>
+	<br><br>
+	
+	
+	<form #form="ngForm" (ngSubmit)="login(form)" method="post">
+	<!--<form #form="ngForm" method="post">-->
+		<ion-item lines="none">
+			<ion-input autofocus="true" type="text" [(ngModel)]="username" name="username" placeholder="UserName"  slot=""></ion-input>
+		</ion-item>
+		<br>
+		<ion-item lines="none">
+			<ion-input #showHidePassword ngModel type="password" name="password" placeholder="Password" slot=""></ion-input>
+		</ion-item>
+		<br>
+		<ion-button type="submit" fill="outline" expand="block" class="login_btn">
+		<!--<ion-button [routerLink]="['/home']" routerDirection="forward" fill="outline" expand="block" class="login_btn">-->
+			<p>Login</p>
+		</ion-button>
+		<p class="help">Don't have an account?<span [routerLink]="['/register']" routerDirection="forward"> Sign up here.</span></p>
+	</form>
+	
+ </div>
+	
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col size="12" class="ion-text-center ion-padding-horizontal footer_text">
+			<p>© Copyright 2021 | World Wide Singles . All Right Reserved</p>
+		</ion-col>
+	</ion-row>
+</ion-footer>
+
+
+

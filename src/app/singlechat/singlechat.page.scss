@@ -1,0 +1,125 @@
+.profilepic{
+	margin-right: 20px;
+}
+
+
+.profile_img{
+	height:50px;
+	width:50px;
+	overflow:hidden;
+	border-radius:50%;
+}
+
+
+.verticalalign{
+	align-self:center;
+	}
+
+.verticalalign img{
+	border-radius:50%;
+	width:auto;
+}
+
+.chat_time, .mychat_time{
+	font-size:12px;
+	color:var(--ion-color-medium, 92949c);
+}
+
+.mychat_time{
+	margin-right:4px;
+}
+
+.all_messages{
+    height: 100%;
+    /*overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;*/
+}
+
+
+.mychat{
+	margin:6px 0;
+	padding: 15px 30px;
+	display:inline-block;
+	background-color: var(--ion-color-primary, #FD671D);
+	background-image: linear-gradient(315deg, #FD671D 0%, #FD671D 60%);
+	color:var(--ion-color-secondary-contrast, #ffffff);
+	border-radius: 25px 25px 0 25px;
+}
+
+.chatday{
+	margin:6px 0;
+	padding:4px 16px;
+	box-shadow: 0 0px 4px 0 rgb(0 0 0 / 12%), 0 2px 8px 0 rgb(0 0 0 / 10%);
+	font-size:14px;
+	display:inline-block;
+	background-color: var(--ion-color-secondary-contrast, #ffffff);
+	color:var(--ion-color-primary-tint, #d52931);
+	border-radius: 25px;
+}
+
+.chat{
+	margin:6px 0;
+}
+
+.send{
+	align-self:center;
+}
+.send ion-icon{
+	color:var(--ion-color-primary-tint, #d52931);
+    font-size: 22px !important;
+    padding: 0 3px;
+}
+
+ion-footer{
+	height:66px;
+	border-radius:30px 30px 0 0;
+	box-shadow:0 0px 4px 0 rgb(0 0 0 / 20%), 0 0px 18px 0 rgb(0 0 0 / 25%);
+}
+	
+	
+.message ion-input{
+    background: var(--ion-color-light, #f4f5f8);
+    border-radius: 20px;
+	--padding-start:20px;
+}
+
+.paddingtop{
+	padding-top:10px;
+}
+
+.chatnow{
+	text-align:center;
+}
+
+
+.chatnow_matched{
+	text-align:center;
+	font-size:20px;
+}
+
+.send_btn{
+	--background:var(--ion-color-secondary-contrast, #ffffff) !important;
+}
+
+.send_btn:hover ion-icon{
+	color:var(--ion-color-secondary-contrast, #ffffff);
+}
+
+@media only screen and (max-width: 500px){
+	.webadjust{
+		margin: 5px !important;
+	}
+
+}
+
+
+@media only screen and (min-width: 767px){
+	.webadjust{
+		width: 22%;
+		margin: auto;
+	    min-width: 400px;
+	}
+
+}
+
