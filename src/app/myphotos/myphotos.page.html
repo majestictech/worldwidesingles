@@ -28,8 +28,8 @@
 		</ion-list>
 		-->
 		
-		<!--
-		<ion-list>
+		
+		<ion-list Class="reOrderImg">
 			<ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
 
 				<ion-item *ngFor="let photo of (photos)">
@@ -48,9 +48,9 @@
 				</div>
 			</ion-item>
 		</ion-list>
-		-->
 		
-		<ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
+		
+		<!-- <ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
 		<div class="allphotos">
 			<ion-row class="ion-padding-horizontal">
 							
@@ -65,9 +65,9 @@
 				<ion-col size="4" *ngFor="let nophoto of (blankPhotos)">
 					<div class="picture">
 						<ion-badge color="primary"><ion-icon name="add" (click)="selectImage(userImage)"></ion-icon></ion-badge>
-						<!--<ion-badge color="primary">
+						<ion-badge color="primary">
 							 <ion-button fill="clear"  color="medium" size="large" (click)="selectImage(userImage)"></ion-button>
-						</ion-badge>-->
+						</ion-badge>
 					</div>			
 				</ion-col>
 				
@@ -76,7 +76,7 @@
 			</ion-row>
 			
 		</div>
-		</ion-reorder-group>
+		</ion-reorder-group> -->
 	</ion-grid>
 
 
